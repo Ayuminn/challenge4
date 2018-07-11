@@ -11,33 +11,34 @@ ul.chat-users-wrapper {
   list-style: none;
 }
 
-.chat-users-wrapper {　/* 全投稿 */
+.chat-users-wrapper {
   height: 250px;
   width: 360px;
   overflow-y: scroll;
   border: 1px solid #F4F4F4;
 }
 
-.chat-user-wrapper {　/* 各投稿 */
+.chat-user-wrapper {
   padding: 10px;
   border-bottom: 1px solid #F4F4F4;
-  height: 75px; /* minを削除 */
-  display: flex;　/* 各投稿をboxに */
+  height: 75px;
+  display: flex;
   flex-direction: row;
-  justify-content: flex-start; /* 左寄り */
+  justify-content: flex-start;
   align-items: center;
-  background-color: rgb(235, 235, 235); /* 一旦全て灰色 */
+  background-color: white;
 }
 
-#color { background-color: white; }
-
-.chat-user-wrapper.is-active {　/* 背景色が変わらない */
+.chat-user-wrapper.is-active {
   background-color: rgb(235, 235, 235);
 }
 
-.chat-user-avatar {
-  margin-right: 5px;
+.chat-user-main {
+  width: calc(100% - 65px);
+}
 
+.chat-user-avatar {
+  margin-right: 15px;
 }
 
 .chat-user-avatar img {
@@ -45,7 +46,6 @@ ul.chat-users-wrapper {
   height: 50px;
   width: 50px;
   background-color: #F4F4F4;
-  margin: 10px;
 }
 
 .last-chat-time, .last-chat-message {
@@ -53,24 +53,16 @@ ul.chat-users-wrapper {
   color: #9E9F9F;
 }
 
-.chat-user-main-upper {　/* 時間を右寄りにしたいが効かない */
-  /* display: flex; */
-  /* flex-direction: row; */
-  /* justify-content: space-between; */
-  /* flex-wrap: no-wrap; */
-  }
+.chat-user-main-upper {
+ display: flex;
+ flex-direction: row;
+ justify-content: space-between;
+ flex-wrap: no-wrap;
+}
 
 .last-chat-message {
-  width: 260px;   /* ??? */
+  /* width: 260px; */
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-}
-
-.chat-user-name {
-  float: left;
-}
-
-.last-chat-time {
-  float: right;
 }
